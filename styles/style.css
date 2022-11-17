@@ -70,6 +70,12 @@ html {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -1px;
+  margin-top: 1rem;
+}
+
+.info-column h1:first-child {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .calendar-month {
@@ -87,6 +93,10 @@ html {
 
 .calendar-month-button-container:nth-child(3) {
   justify-content: right;
+}
+
+button {
+  font-family: inherit;
 }
 
 .month-button {
@@ -131,6 +141,19 @@ html {
   margin: 0.2rem 0 0 0.4rem;
 }
 
-.information-body {
+.form-section {
+  margin-bottom: 0.5rem;
+}
+
+.day-notes {
+  font-size: 12px;
+  margin: 0.2rem;
+}
+
+.submit-button {
+  background-color:#f0f0f0;
+  padding: 0.6rem 1.4rem;
   margin-top: 1rem;
+  border-style: none;
+  cursor: pointer;
 }

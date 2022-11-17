@@ -9,6 +9,8 @@ let changeNextMonth = () => {
     currentMonth++;
   }
   setCalendar();
+  updateDaySelectList();
+  clearNotes();
 }
 
 let changePrevMonth = () => {
@@ -19,6 +21,8 @@ let changePrevMonth = () => {
     currentMonth--;
   }
   setCalendar();
+  updateDaySelectList();
+  clearNotes();
 }
 
 monthButtonNext.addEventListener("click", changeNextMonth);

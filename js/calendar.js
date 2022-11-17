@@ -14,32 +14,33 @@ let getDaysInMonth = (year, month) => {
   return new Date(year, month + 1, 0).getDate();
 }
 
+let firstDayVal;
+switch(getFirstDayOfMonth(currentYear, currentMonth).getDay()) {
+  case 0:
+    firstDayVal = 0;
+    break;
+  case 1:
+    firstDayVal = 1;
+    break;
+  case 2:
+    firstDayVal = 2;
+    break;
+  case 3:
+    firstDayVal = 3;
+    break;
+  case 4:
+    firstDayVal = 4;
+    break;
+  case 5:
+    firstDayVal = 5;
+    break;
+  case 6:
+    firstDayVal = 6;
+    break;
+}
+
 let setCalendar = () => {
   document.querySelector("#currentMonth").innerHTML = monthNames[currentMonth] + " " + currentYear;
-  let firstDayVal;
-  switch(getFirstDayOfMonth(currentYear, currentMonth).getDay()) {
-    case 0:
-      firstDayVal = 0;
-      break;
-    case 1:
-      firstDayVal = 1;
-      break;
-    case 2:
-      firstDayVal = 2;
-      break;
-    case 3:
-      firstDayVal = 3;
-      break;
-    case 4:
-      firstDayVal = 4;
-      break;
-    case 5:
-      firstDayVal = 5;
-      break;
-    case 6:
-      firstDayVal = 6;
-      break;
-  }
   
   for (let i = 1; i < firstDayVal + 1; i++) {
     document.querySelector("#day" + i).innerHTML = "";
