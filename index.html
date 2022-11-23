@@ -17,246 +17,258 @@
         </h1>
         <nav class="header-nav">
           <ul>
-            <li class="nav-item"><a href="#">About</a></li>
+            <li class="nav-item"><a href="./about.html">About</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <div class="container">
-        <div class="calendar-container">
-
-          <div class="info-column">
+      <div class="calendar-container">
+        <div class="info-column">
+          <section class="section-add-notes section-info">
             <h1>Add Notes</h1>
             <div>
               <div class="form-section">
-                <label for="day"">Select Day: </label>
+                <label for="day">Select Day: </label>
                 <select name="daySelectList" id="daySelectList">
                   <option value="1">1</option>
+                </select>
+                <br>
+                <label for="day">Select Color: </label>
+                <select name="colorList" id="colorList">
+                  <option value="none">None</option>
+                  <option value="teal">Teal</option>
+                  <option value="blue">Blue</option>
+                  <option value="peach">Peach</option>
+                  <option value="purple">Purple</option>
+                  <option value="green">Green</option>
                 </select>
               </div>
               <div class="form-section">
                 <label for="dayNotes">Text: </label>
                 <input type="text" name="dayNotes" id="dayNotes">
                 <br>
-                <button class="submit-button" id="addNotesButton">Add Notes</button>
+                <button class="form-button" id="addNotesButton">Add Notes</button>
+                <button class="form-button" id="clearButton">Clear Date</button>
               </div>
             </div>
-            <h1>Information</h1>
-            <div class="information-body">
+          </section>
+          <section class="section-overview section-info">
+            <h1>Overview</h1>
+            <div class="information-body" id="informationBody">
               <p></p>
             </div>
+          </section>
+        </div>
+
+        <div class="calendar-column">
+
+          <div class="calendar-month-button-container">
+            <button class="month-button" id="monthButtonPrev"><</button>
+          </div>
+          <div class="calendar-month">
+            <div id="currentMonth">Month</div>
+          </div>
+          <div class="calendar-month-button-container">
+            <button class="month-button" id="monthButtonNext">></button>
+          </div>
+          
+          <div class="calendar-heading">
+            <h2>Sunday</h2>
+          </div>
+          <div class="calendar-heading">
+            <h2>Monday</h2>
+          </div>
+          <div class="calendar-heading">
+            <h2>Tuesday</h2>
+          </div>
+          <div class="calendar-heading">
+            <h2>Wednesday</h2>
+          </div>
+          <div class="calendar-heading">
+            <h2>Thursday</h2>
+          </div>
+          <div class="calendar-heading">
+            <h2>Friday</h2>
+          </div>
+          <div class="calendar-heading">
+            <h2>Saturday</h2>
           </div>
 
-          <div class="calendar-column">
-
-            <div class="calendar-month-button-container">
-              <button class="month-button" id="monthButtonPrev"><</button>
-            </div>
-            <div class="calendar-month">
-              <div id="currentMonth">Month</div>
-            </div>
-            <div class="calendar-month-button-container">
-              <button class="month-button" id="monthButtonNext">></button>
-            </div>
-            
-            <div class="calendar-heading">
-              <h2>Sunday</h2>
-            </div>
-            <div class="calendar-heading">
-              <h2>Monday</h2>
-            </div>
-            <div class="calendar-heading">
-              <h2>Tuesday</h2>
-            </div>
-            <div class="calendar-heading">
-              <h2>Wednesday</h2>
-            </div>
-            <div class="calendar-heading">
-              <h2>Thursday</h2>
-            </div>
-            <div class="calendar-heading">
-              <h2>Friday</h2>
-            </div>
-            <div class="calendar-heading">
-              <h2>Saturday</h2>
-            </div>
-
-            <div class="calendar-day">
-              <h2 id="day1">-</h2>
-              <div class="day-notes" id="dayNotes1"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day2">-</h2>
-              <div class="day-notes" id="dayNotes2"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day3">-</h2>
-              <div class="day-notes" id="dayNotes3"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day4">-</h2>
-              <div class="day-notes" id="dayNotes4"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day5">-</h2>
-              <div class="day-notes" id="dayNotes5"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day6">-</h2>
-              <div class="day-notes" id="dayNotes6"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day7">-</h2>
-              <div class="day-notes" id="dayNotes7"></div>
-            </div>
-
-            <div class="calendar-day">
-              <h2 id="day8">-</h2>
-              <div class="day-notes" id="dayNotes8"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day9">-</h2>
-              <div class="day-notes" id="dayNotes9"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day10">-</h2>
-              <div class="day-notes" id="dayNotes10"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day11">-</h2>
-              <div class="day-notes" id="dayNotes11"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day12">-</h2>
-              <div class="day-notes" id="dayNotes12"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day13">-</h2>
-              <div class="day-notes" id="dayNotes13"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day14">-</h2>
-              <div class="day-notes" id="dayNotes14"></div>
-            </div>
-
-            <div class="calendar-day">
-              <h2 id="day15">-</h2>
-              <div class="day-notes" id="dayNotes15"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day16">-</h2>
-              <div class="day-notes" id="dayNotes16"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day17">-</h2>
-              <div class="day-notes" id="dayNotes17"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day18">-</h2>
-              <div class="day-notes" id="dayNotes18"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day19">-</h2>
-              <div class="day-notes" id="dayNotes19"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day20">-</h2>
-              <div class="day-notes" id="dayNotes20"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day21">-</h2>
-              <div class="day-notes" id="dayNotes21"></div>
-            </div>
-
-            <div class="calendar-day">
-              <h2 id="day22">-</h2>
-              <div class="day-notes" id="dayNotes22"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day23">-</h2>
-              <div class="day-notes" id="dayNotes23"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day24">-</h2>
-              <div class="day-notes" id="dayNotes24"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day25">-</h2>
-              <div class="day-notes" id="dayNotes25"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day26">-</h2>
-              <div class="day-notes" id="dayNotes26"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day27">-</h2>
-              <div class="day-notes" id="dayNotes27"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day28">-</h2>
-              <div class="day-notes" id="dayNotes28"></div>
-            </div>
-
-            <div class="calendar-day">
-              <h2 id="day29">-</h2>
-              <div class="day-notes" id="dayNotes29"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day30">-</h2>
-              <div class="day-notes" id="dayNotes30"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day31">-</h2>
-              <div class="day-notes" id="dayNotes31"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day32">-</h2>
-              <div class="day-notes" id="dayNotes32"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day33">-</h2>
-              <div class="day-notes" id="dayNotes33"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day34">-</h2>
-              <div class="day-notes" id="dayNotes34"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day35">-</h2>
-              <div class="day-notes" id="dayNotes35"></div>
-            </div>
-
-            <div class="calendar-day">
-              <h2 id="day36">-</h2>
-              <div class="day-notes" id="dayNotes36"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day37">-</h2>
-              <div class="day-notes" id="dayNotes37"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day38">-</h2>
-              <div class="day-notes" id="dayNotes38"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day39">-</h2>
-              <div class="day-notes" id="dayNotes39"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day40">-</h2>
-              <div class="day-notes" id="dayNotes40"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day41">-</h2>
-              <div class="day-notes" id="dayNotes41"></div>
-            </div>
-            <div class="calendar-day">
-              <h2 id="day42">-</h2>
-              <div class="day-notes" id="dayNotes42"></div>
-            </div>
-
+          <div class="calendar-day">
+            <h2 id="day1">-</h2>
+            <div class="day-notes" id="dayNotes1"></div>
           </div>
+          <div class="calendar-day">
+            <h2 id="day2">-</h2>
+            <div class="day-notes" id="dayNotes2"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day3">-</h2>
+            <div class="day-notes" id="dayNotes3"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day4">-</h2>
+            <div class="day-notes" id="dayNotes4"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day5">-</h2>
+            <div class="day-notes" id="dayNotes5"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day6">-</h2>
+            <div class="day-notes" id="dayNotes6"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day7">-</h2>
+            <div class="day-notes" id="dayNotes7"></div>
+          </div>
+
+          <div class="calendar-day">
+            <h2 id="day8">-</h2>
+            <div class="day-notes" id="dayNotes8"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day9">-</h2>
+            <div class="day-notes" id="dayNotes9"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day10">-</h2>
+            <div class="day-notes" id="dayNotes10"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day11">-</h2>
+            <div class="day-notes" id="dayNotes11"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day12">-</h2>
+            <div class="day-notes" id="dayNotes12"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day13">-</h2>
+            <div class="day-notes" id="dayNotes13"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day14">-</h2>
+            <div class="day-notes" id="dayNotes14"></div>
+          </div>
+
+          <div class="calendar-day">
+            <h2 id="day15">-</h2>
+            <div class="day-notes" id="dayNotes15"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day16">-</h2>
+            <div class="day-notes" id="dayNotes16"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day17">-</h2>
+            <div class="day-notes" id="dayNotes17"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day18">-</h2>
+            <div class="day-notes" id="dayNotes18"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day19">-</h2>
+            <div class="day-notes" id="dayNotes19"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day20">-</h2>
+            <div class="day-notes" id="dayNotes20"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day21">-</h2>
+            <div class="day-notes" id="dayNotes21"></div>
+          </div>
+
+          <div class="calendar-day">
+            <h2 id="day22">-</h2>
+            <div class="day-notes" id="dayNotes22"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day23">-</h2>
+            <div class="day-notes" id="dayNotes23"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day24">-</h2>
+            <div class="day-notes" id="dayNotes24"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day25">-</h2>
+            <div class="day-notes" id="dayNotes25"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day26">-</h2>
+            <div class="day-notes" id="dayNotes26"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day27">-</h2>
+            <div class="day-notes" id="dayNotes27"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day28">-</h2>
+            <div class="day-notes" id="dayNotes28"></div>
+          </div>
+
+          <div class="calendar-day">
+            <h2 id="day29">-</h2>
+            <div class="day-notes" id="dayNotes29"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day30">-</h2>
+            <div class="day-notes" id="dayNotes30"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day31">-</h2>
+            <div class="day-notes" id="dayNotes31"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day32">-</h2>
+            <div class="day-notes" id="dayNotes32"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day33">-</h2>
+            <div class="day-notes" id="dayNotes33"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day34">-</h2>
+            <div class="day-notes" id="dayNotes34"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day35">-</h2>
+            <div class="day-notes" id="dayNotes35"></div>
+          </div>
+
+          <div class="calendar-day">
+            <h2 id="day36">-</h2>
+            <div class="day-notes" id="dayNotes36"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day37">-</h2>
+            <div class="day-notes" id="dayNotes37"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day38">-</h2>
+            <div class="day-notes" id="dayNotes38"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day39">-</h2>
+            <div class="day-notes" id="dayNotes39"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day40">-</h2>
+            <div class="day-notes" id="dayNotes40"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day41">-</h2>
+            <div class="day-notes" id="dayNotes41"></div>
+          </div>
+          <div class="calendar-day">
+            <h2 id="day42">-</h2>
+            <div class="day-notes" id="dayNotes42"></div>
+          </div>
+
         </div>
       </div>
     </main>
