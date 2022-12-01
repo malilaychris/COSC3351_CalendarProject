@@ -150,6 +150,7 @@ button {
   border-bottom: 1px solid #f1f1f1;
   border-right: 1px solid #f1f1f1;
   height: 8.5rem;
+  overflow-y: auto;
 }
 
 .calendar-day h2 {
