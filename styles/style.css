@@ -40,6 +40,9 @@ body {
 }
 
 .header-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
@@ -225,6 +228,10 @@ button {
   background-color: #CCE2CB;
 }
 
+.note-holiday {
+  background-color: #e9e9e9;;
+}
+
 .overview-item {
   margin-bottom: 0.4rem;
 }
@@ -263,4 +270,87 @@ button {
 
 .member-list {
   list-style: none;
+}
+
+.dark-mode-body {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.dark-mode-item1 {
+  background-color: #141414;
+}
+
+.dark-mode-item2 {
+  background-color: #161616;
+  color: #fff;
+}
+
+.dark-mode-item2:hover {
+  background-color: #242424;
+}
+
+.dark-mode-calendar-day {
+  border-bottom: 1px solid #161616;
+  border-right: 1px solid #161616;
+  height: 8.5rem;
+}
+
+.dark-mode-form-button {
+  background-color: #444444;
+  color: #fff;
+}
+
+.dark-mode-form-button:hover {
+  background-color: #555555;
+}
+
+.note-default-dark {
+  opacity: 0.5;
+}
+
+.note-teal-dark {
+  background-color: #006d6d;
+}
+
+.note-blue-dark {
+  background-color: #0090c9;
+}
+
+.note-peach-dark {
+  background-color: #ff7f24;
+}
+
+.note-purple-dark {
+  background-color: #79009e;
+}
+
+.note-green-dark {
+  background-color: #359630;
+}
+
+.note-holiday-dark {
+  background-color: #242424;
+}
+
+.note-none-dark {
+  color: #000;
+}
+
+#darkModeIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 3rem;
+  width: 3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#darkModeIcon img {
+  opacity: 85%;
+  filter: invert(0);
+  height: 3rem;
+  width: 3rem;
 }

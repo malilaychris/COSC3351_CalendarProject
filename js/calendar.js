@@ -32,6 +32,10 @@ let setCalendar = () => {
   for(let i = getDaysInMonth(currentYear, currentMonth) + firstDayVal + 1; i <= 42; i++) {
     document.querySelector("#day" + i).innerHTML = "";
   }
+
+  updateHolidays(currentMonth);
+  updateDaySelectList();
+  printSavedNotes();
 }
 
 setCalendar();

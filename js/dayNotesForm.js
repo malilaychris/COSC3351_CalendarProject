@@ -19,14 +19,31 @@ let updateDaySelectList = () => {
 updateDaySelectList();
 
 let submitDayNote = () => {
-  document.querySelector("#dayNotes" + (parseInt(daySelectList.value) + firstDayVal)).innerHTML += `<div class="note-default note-${colorList.value}">${dayNotes.value}</div>`;
-  
+  if(darkStatus) {
+    document.querySelector("#dayNotes" + (parseInt(daySelectList.value) + firstDayVal)).innerHTML += `<div class="note-default note-${colorList.value} note-${colorList.value}-dark">${dayNotes.value}</div>`;
+  } else {
+    document.querySelector("#dayNotes" + (parseInt(daySelectList.value) + firstDayVal)).innerHTML += `<div class="note-default note-${colorList.value}">${dayNotes.value}</div>`;
+  }
+
+  addNote(currentYear, currentMonth + 1, daySelectList.value, colorList.value, dayNotes.value);
   dayModified = new Date(currentYear, currentMonth, daySelectList.value);
 
-  informationBody.innerHTML += `<p class="overview-item" id="dayNoteItem${parseInt(daySelectList.value) + firstDayVal}">${dayModified.toLocaleDateString("en-US")} - ${dayNotes.value}</p>`;
+  setOverviewNotes();
+
+  //informationBody.innerHTML += `<p class="overview-item" id="dayNoteItem${parseInt(daySelectList.value) + firstDayVal}">${dayModified.toLocaleDateString("en-US")} - ${dayNotes.value}</p>`;
 }
 
 let clearDayNote = () => {
+  for(let i = 0; i < notes.length; i++) {
+    if(currentYear == notes[i].year && (currentMonth + 1) == notes[i].month && parseInt(daySelectList.value) == notes[i].day) {
+      notes.splice(i, 1);
+      i--;
+    }
+    updateLocalStorage();
+  }
+
+  setOverviewNotes();
+
   document.querySelector("#dayNotes" + (parseInt(daySelectList.value) + firstDayVal)).innerHTML = '';
   document.querySelector(`#dayNoteItem${parseInt(daySelectList.value) + firstDayVal}`).remove();
 }
